@@ -1,26 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import "./resources/styles.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import Featured from './components/featured/index'
+import Header from "./components/header_footer/Header";
+import VenueNFo from './components/venueNFo'
+import Highlight from './components/Highlights'
+import Pricing from './components/pricing'
+import Location from './components/location'
+import Footer from './components/header_footer/Footer'
+
+import { Element } from 'react-scroll'
+
+
+
+
+ class App extends Component {
+  render() {
+    return (
+      <div
+      className="App"
+      style={{ height: "1000px", background: "cornflowerblue" }}
+    >
+    
+      <Header />
+    
+      <Element name="Featured">
+          <Featured />
+      </Element>
+      
+      <Element name="Venue NFO">
+         <VenueNFo/> 
+      </Element>
+      
+      <Element name="highlights">
+         <Highlight/>
+      </Element>
+
+      <Element name="Pricing">
+         <Pricing/>
+      </Element>
+
+      <Element name="Location">
+          <Location/>
+      </Element>
+      
+      <Footer/>
     </div>
-  );
+    )
+  }
 }
 
 export default App;
