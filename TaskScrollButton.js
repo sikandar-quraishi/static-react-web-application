@@ -19,7 +19,7 @@ const TaskScrollButton = () => {
         size="small"
         color="secondary"
         aria-label="add"
-        style={{ backgroundColor: "#000000", color: "white" }}
+        style={{ backgroundColor: "#2c2c2c", color: "#ffffff" }}
       >
         <NavigationIcon />
       </Button>
